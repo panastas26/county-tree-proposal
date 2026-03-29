@@ -1,260 +1,599 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CoGrow Proposal - Brian</title>
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            heading: ['Epilogue', 'sans-serif'],
-            body: ['Manrope', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              green: '#166534',
-              lime: '#84cc16',
-              light: '#f0fdf4',
-            }
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    body { font-family: 'Manrope', sans-serif; }
-    h1, h2, h3, h4 { font-family: 'Epilogue', sans-serif; }
-    @media print {
-      .no-print { display: none; }
-      body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
-    }
-  </style>
-</head>
-<body class="bg-white text-gray-800">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoGrow × County Tree Service — Growth Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1a3d2b;
+    --green-light: #24553d;
+    --gold: #c9a84c;
+    --gold-light: #d4ba6a;
+    --white: #ffffff;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-400: #9ca3af;
+    --gray-600: #4b5563;
+    --gray-800: #1f2937;
+    --text: #1a1a1a;
+  }
 
-  <!-- Header -->
-  <div class="bg-brand-green text-white px-8 py-10">
-    <div class="max-w-3xl mx-auto">
-      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
-        <div>
-          <p class="text-brand-lime font-heading font-bold text-sm uppercase tracking-widest mb-1">Prepared exclusively for</p>
-          <h1 class="font-heading font-black text-3xl sm:text-4xl leading-tight">Brian &amp; His Team</h1>
-          <p class="text-green-200 mt-1 text-sm">County Tree Service &amp; [Second Business]</p>
-        </div>
-        <div class="sm:text-right">
-          <p class="font-heading font-bold text-xl text-brand-lime">CoGrow</p>
-          <p class="text-green-200 text-sm">cogrow.ai</p>
-          <p class="text-green-200 text-sm">paul@cogrow.ai</p>
-          <p class="text-green-300 text-xs mt-2">March 2026</p>
-        </div>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Epilogue', sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  /* ── Layout ── */
+  .page { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
+
+  section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  section:last-of-type { border-bottom: none; }
+
+  /* ── Cover ── */
+  .cover {
+    background: var(--green);
+    color: var(--white);
+    padding: 5rem 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--gold);
+  }
+  .cover-inner { max-width: 860px; margin: 0 auto; }
+  .cover .brand {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+  }
+  .cover h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+  .cover h1 span { color: var(--gold); }
+  .cover .subtitle {
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 3rem;
+  }
+  .cover-meta {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.6);
+  }
+  .cover-meta strong { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+  /* ── Section headers ── */
+  .section-label {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  section h2 {
+    font-size: 2rem;
+    color: var(--green);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+  }
+  section h3 {
+    font-size: 1.15rem;
+    color: var(--green);
+    margin-bottom: 0.5rem;
+  }
+  section p { margin-bottom: 1rem; color: var(--gray-600); }
+  section p:last-child { margin-bottom: 0; }
+
+  .lead {
+    font-size: 1.1rem;
+    color: var(--gray-800);
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  /* ── Problem cards ── */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .problem-card {
+    background: var(--gray-50);
+    border-left: 4px solid var(--gold);
+    padding: 1.5rem 1.75rem;
+    border-radius: 0 8px 8px 0;
+  }
+  .problem-card .num {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .problem-card h3 { margin-bottom: 0.5rem; }
+  .problem-card p { font-size: 0.95rem; margin-bottom: 0; }
+
+  /* ── Solution items ── */
+  .solution-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .solution-item {
+    padding: 1.5rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    background: var(--white);
+  }
+  .solution-item .icon {
+    width: 40px;
+    height: 40px;
+    background: var(--green);
+    color: var(--gold);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Epilogue', sans-serif;
+  }
+  .solution-item h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+  .solution-item p { font-size: 0.9rem; margin-bottom: 0; }
+
+  /* ── Deliverables ── */
+  .deliverables-list {
+    margin-top: 1.5rem;
+    list-style: none;
+  }
+  .deliverables-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gray-100);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: var(--gray-600);
+    font-size: 0.95rem;
+  }
+  .deliverables-list li:last-child { border-bottom: none; }
+  .deliverables-list .check {
+    color: var(--green);
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    flex-shrink: 0;
+  }
+  .deliverables-list strong { color: var(--gray-800); }
+
+  /* ── Timeline ── */
+  .timeline {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .timeline-item {
+    text-align: center;
+    padding: 2rem 1.25rem;
+    background: var(--gray-50);
+    border-radius: 8px;
+    position: relative;
+  }
+  .timeline-item .month {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .timeline-item h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+  .timeline-item p { font-size: 0.85rem; margin-bottom: 0; }
+
+  /* ── Investment ── */
+  .investment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .price-card {
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .price-card.setup {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+  }
+  .price-card.monthly {
+    background: var(--green);
+    color: var(--white);
+  }
+  .price-card .label {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .price-card.setup .label { color: var(--gray-400); }
+  .price-card.monthly .label { color: var(--gold); }
+  .price-card .amount {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .price-card.setup .amount { color: var(--green); }
+  .price-card.monthly .amount { color: var(--white); }
+  .price-card .note {
+    font-size: 0.85rem;
+  }
+  .price-card.setup .note { color: var(--gray-400); }
+  .price-card.monthly .note { color: rgba(255,255,255,0.6); }
+
+  .roi-box {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--gold);
+  }
+  .roi-box h3 {
+    color: var(--gold);
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .roi-box p {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+  .roi-box p:last-child { margin-bottom: 0; }
+  .roi-box strong { color: var(--white); }
+
+  /* ── Why CoGrow ── */
+  .why-list {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .why-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .why-item .bullet {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.55rem;
+  }
+  .why-item h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+  .why-item p { font-size: 0.9rem; margin-bottom: 0; }
+
+  /* ── CTA ── */
+  .cta-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: var(--green);
+    color: var(--white);
+    border-bottom: none;
+  }
+  .cta-section h2 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .cta-section p {
+    color: rgba(255,255,255,0.7);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--green);
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .cta-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: var(--gray-50);
+    border-top: 1px solid var(--gray-200);
+  }
+  footer .brand {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--green);
+    margin-bottom: 0.5rem;
+  }
+  footer p {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+  }
+  footer a { color: var(--green); text-decoration: none; }
+
+  /* ── Print ── */
+  @media print {
+    .cover { break-after: page; }
+    section { break-inside: avoid; }
+    .cta-btn { border: 2px solid var(--gold); }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 700px) {
+    .cover h1 { font-size: 1.75rem; }
+    .cover-meta { flex-direction: column; gap: 0.75rem; }
+    section h2 { font-size: 1.5rem; }
+    .solution-list { grid-template-columns: 1fr; }
+    .timeline { grid-template-columns: 1fr; }
+    .investment-grid { grid-template-columns: 1fr; }
+    .page { padding: 0 1.25rem; }
+    section { padding: 3rem 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════ COVER ════════════════════ -->
+<header class="cover">
+  <div class="cover-inner">
+    <div class="brand">CoGrow</div>
+    <h1>CoGrow <span>&times;</span> County Tree Service</h1>
+    <p class="subtitle">A Growth Partnership Proposal</p>
+    <div class="cover-meta">
+      <div><strong>Prepared for</strong><br>Brian — County Tree Service</div>
+      <div><strong>Prepared by</strong><br>PJ Anastas — CoGrow</div>
+      <div><strong>Date</strong><br>March 2026</div>
+    </div>
+  </div>
+</header>
+
+<!-- ════════════════════ THE PROBLEM ════════════════════ -->
+<section>
+  <div class="page">
+    <div class="section-label">01 — The Problem</div>
+    <h2>What's Holding County Tree Back</h2>
+    <p class="lead">County Tree Service does great work — but right now, your online presence is working against you. Here are the three issues we identified:</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="num">Problem 01</div>
+        <h3>Fragmented Web Presence</h3>
+        <p>Multiple domains are splitting your authority across the web. Instead of one strong signal telling Google "this is County Tree Service," you have several weak ones competing with each other. Customers searching for you may land on the wrong site — or no site at all.</p>
       </div>
-      <div class="border-t border-green-600 pt-6">
-        <p class="text-green-100 text-lg font-medium leading-relaxed">
-          You've built two real businesses. The work is there. The reputation is there.<br/>
-          <span class="text-white font-semibold">Your digital presence is the only thing holding you back.</span>
-        </p>
+      <div class="problem-card">
+        <div class="num">Problem 02</div>
+        <h3>No Google Business Profile</h3>
+        <p>When someone in Stickney or the surrounding Chicago area searches "tree service near me," the first thing they see is the Google Map Pack — the top three local businesses. Without a Google Business Profile, County Tree is invisible in that pack. You're not even in the conversation.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">Problem 03</div>
+        <h3>Poor SEO — Competitors Are Winning Your Jobs</h3>
+        <p>Your current site isn't optimized for the searches your customers are making. Competitors who rank on page one are getting the calls that should be going to you. Every day without visibility is revenue walking out the door.</p>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- Main Content -->
-  <div class="max-w-3xl mx-auto px-8 py-10 space-y-12">
-
-    <!-- Pain Section -->
-    <section>
-      <h2 class="font-heading font-black text-2xl text-brand-green mb-6 flex items-center gap-3">
-        <span class="bg-red-100 text-red-600 rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">!</span>
-        What's Costing You Jobs Right Now
-      </h2>
-      <div class="grid gap-4">
-
-        <div class="border-l-4 border-red-400 pl-5 py-2">
-          <h3 class="font-heading font-bold text-gray-900 mb-1">Your website doesn't load.</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">When a homeowner searches for tree service and clicks your site - and it spins or crashes - they hit back and call your competitor. That's a lost job before you ever had a chance. It happens silently, every single day.</p>
-        </div>
-
-        <div class="border-l-4 border-red-400 pl-5 py-2">
-          <h3 class="font-heading font-bold text-gray-900 mb-1">Multiple domains fighting each other.</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Google doesn't know which one is the "real" you. Neither do customers. A fragmented online presence splits your authority and tanks your rankings across both businesses.</p>
-        </div>
-
-        <div class="border-l-4 border-red-400 pl-5 py-2">
-          <h3 class="font-heading font-bold text-gray-900 mb-1">No Google Business Profile.</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">This is the #1 local ranking factor. Competitors who've been around half as long are showing up above you in Google Maps because they have a claimed, optimized GBP. You're invisible where it counts most.</p>
-        </div>
-
-        <div class="border-l-4 border-red-400 pl-5 py-2">
-          <h3 class="font-heading font-bold text-gray-900 mb-1">Poor SEO across both businesses.</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Your sites aren't telling Google what you do, where you do it, or why you're the best option. That's fixable - and the results compound over time.</p>
-        </div>
-
+<!-- ════════════════════ THE SOLUTION ════════════════════ -->
+<section>
+  <div class="page">
+    <div class="section-label">02 — The Solution</div>
+    <h2>What CoGrow Will Do</h2>
+    <p class="lead">We fix the foundation, then build the engine that drives leads to your phone.</p>
+    <div class="solution-list">
+      <div class="solution-item">
+        <div class="icon">1</div>
+        <h3>One Authoritative Website</h3>
+        <p>We consolidate everything into a single, fast, modern website built to convert visitors into calls. No more fragmented domains — one clean presence that Google trusts.</p>
       </div>
-    </section>
-
-    <!-- Math Section -->
-    <section class="bg-brand-light rounded-2xl p-8">
-      <h2 class="font-heading font-black text-2xl text-brand-green mb-2">The Math</h2>
-      <p class="text-gray-600 text-sm mb-6">Your average job is worth <span class="font-bold text-gray-900">$1,000</span>. Here's what you're losing by doing nothing:</p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-        <div class="bg-white rounded-xl p-5 text-center shadow-sm border border-green-100">
-          <p class="text-gray-500 text-xs font-medium uppercase tracking-wide mb-1">Per Week</p>
-          <p class="font-heading font-black text-3xl text-red-500">$3,000</p>
-          <p class="text-gray-400 text-xs mt-1">3 lost jobs</p>
-        </div>
-        <div class="bg-white rounded-xl p-5 text-center shadow-sm border border-green-100">
-          <p class="text-gray-500 text-xs font-medium uppercase tracking-wide mb-1">Per Month</p>
-          <p class="font-heading font-black text-3xl text-red-500">$12,000</p>
-          <p class="text-gray-400 text-xs mt-1">conservative estimate</p>
-        </div>
-        <div class="bg-white rounded-xl p-5 text-center shadow-sm border border-green-100">
-          <p class="text-gray-500 text-xs font-medium uppercase tracking-wide mb-1">Per Year</p>
-          <p class="font-heading font-black text-3xl text-red-500">$144,000</p>
-          <p class="text-gray-400 text-xs mt-1">walking out the door</p>
-        </div>
+      <div class="solution-item">
+        <div class="icon">2</div>
+        <h3>Google Business Profile</h3>
+        <p>We build and fully optimize your GBP — photos, service categories, service areas, and a review generation strategy — so you show up in the Map Pack where homeowners are actually searching.</p>
       </div>
-
-      <div class="bg-brand-green text-white rounded-xl p-5 text-center">
-        <p class="font-heading font-bold text-lg">Your setup fee pays for itself with <span class="text-brand-lime">1 job.</span> The retainer pays for itself with 1 job per month - and we're getting you far more than that.</p>
+      <div class="solution-item">
+        <div class="icon">3</div>
+        <h3>Local SEO</h3>
+        <p>Targeted keyword strategy, on-page optimization, citation building across directories, and monthly reporting to track your rankings as they climb.</p>
       </div>
-    </section>
-
-    <!-- What We Do -->
-    <section>
-      <h2 class="font-heading font-black text-2xl text-brand-green mb-6">What CoGrow Does</h2>
-      <p class="text-gray-600 mb-6 text-sm">We fix the exact problems costing you jobs. For <span class="font-bold text-gray-900">both businesses</span>, under one retainer.</p>
-
-      <div class="space-y-4">
-
-        <div class="flex gap-4 items-start">
-          <div class="bg-brand-lime rounded-lg w-10 h-10 flex items-center justify-center flex-shrink-0 mt-1">
-            <span class="font-heading font-black text-brand-green text-sm">01</span>
-          </div>
-          <div>
-            <h3 class="font-heading font-bold text-gray-900 mb-1">One fast, professional website per business</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">Custom-built. Single domain. Loads in under 2 seconds. Mobile-first. Clear call to action on every page. Built to convert the traffic you're already getting but currently losing.</p>
-          </div>
-        </div>
-
-        <div class="flex gap-4 items-start">
-          <div class="bg-brand-lime rounded-lg w-10 h-10 flex items-center justify-center flex-shrink-0 mt-1">
-            <span class="font-heading font-black text-brand-green text-sm">02</span>
-          </div>
-          <div>
-            <h3 class="font-heading font-bold text-gray-900 mb-1">Google Business Profile - claimed, optimized, active</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">Set up for both businesses. Every field optimized. Photos added. Service areas defined. Review process set up. This is the fastest path to showing up above your competitors in local search.</p>
-          </div>
-        </div>
-
-        <div class="flex gap-4 items-start">
-          <div class="bg-brand-lime rounded-lg w-10 h-10 flex items-center justify-center flex-shrink-0 mt-1">
-            <span class="font-heading font-black text-brand-green text-sm">03</span>
-          </div>
-          <div>
-            <h3 class="font-heading font-bold text-gray-900 mb-1">SEO foundation + citation cleanup</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">On-page SEO for your core services and service areas. All directories (Yelp, Angie's, HomeAdvisor, etc.) cleaned up and pointing to one place. Google stops being confused. You start ranking.</p>
-          </div>
-        </div>
-
-        <div class="flex gap-4 items-start">
-          <div class="bg-brand-lime rounded-lg w-10 h-10 flex items-center justify-center flex-shrink-0 mt-1">
-            <span class="font-heading font-black text-brand-green text-sm">04</span>
-          </div>
-          <div>
-            <h3 class="font-heading font-bold text-gray-900 mb-1">Ongoing management + monthly reporting</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">SEO is not a one-time fix - it's a living system. Google updates algorithms. Competitors adjust. Reviews need monitoring. Citations drift. Without ongoing management, the gains you make in month 1 erode by month 6. The retainer is what keeps you ranking above competitors month after month - and it covers both businesses.</p>
-          </div>
-        </div>
-
-        <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mt-2">
-          <p class="font-heading font-bold text-amber-800 text-sm mb-1">Why a monthly retainer?</p>
-          <p class="text-amber-700 text-sm leading-relaxed">A website build is a one-time project. Ranking on Google is an ongoing competition. Your competitors are not standing still - they're adding reviews, updating content, and paying someone to stay ahead. The retainer is what keeps you winning that competition every single month, not just the first one.</p>
-          <p class="text-amber-700 text-sm leading-relaxed mt-2 font-medium">At $997/mo for two businesses, that's less than $500 per business - and it takes <span class="font-bold">1 job per month</span> to cover it entirely.</p>
-        </div>
-
+      <div class="solution-item">
+        <div class="icon">4</div>
+        <h3>GEO / AI Search Optimization</h3>
+        <p>AI search engines like ChatGPT and Perplexity are increasingly driving local service queries. We optimize your presence so you show up when homeowners ask AI "who's the best tree service near me?"</p>
       </div>
-    </section>
-
-    <!-- Timeline -->
-    <section>
-      <h2 class="font-heading font-black text-2xl text-brand-green mb-6">What to Expect</h2>
-      <div class="relative">
-        <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-green-200"></div>
-        <div class="space-y-6 pl-12">
-          <div class="relative">
-            <div class="absolute -left-8 w-4 h-4 rounded-full bg-brand-lime border-2 border-brand-green"></div>
-            <p class="font-heading font-bold text-gray-900 text-sm">Month 1</p>
-            <p class="text-gray-600 text-sm">Both sites live. Both GBPs claimed and optimized. Domain mess cleaned up. Citations fixed.</p>
-          </div>
-          <div class="relative">
-            <div class="absolute -left-8 w-4 h-4 rounded-full bg-brand-lime border-2 border-brand-green"></div>
-            <p class="font-heading font-bold text-gray-900 text-sm">Month 2-3</p>
-            <p class="text-gray-600 text-sm">Rankings start moving. More calls from Google Maps. You stop losing jobs to a broken website.</p>
-          </div>
-          <div class="relative">
-            <div class="absolute -left-8 w-4 h-4 rounded-full bg-brand-lime border-2 border-brand-green"></div>
-            <p class="font-heading font-bold text-gray-900 text-sm">Month 3-6</p>
-            <p class="text-gray-600 text-sm">Measurable, compounding increase in inbound leads from organic search across both businesses.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="bg-brand-green rounded-2xl p-8 text-white">
-      <h2 class="font-heading font-black text-2xl text-brand-lime mb-2">The Investment</h2>
-      <p class="text-green-200 text-sm mb-8">Both businesses. One team. One price.</p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-        <div class="bg-white/10 rounded-xl p-6 text-center">
-          <p class="text-green-200 text-xs font-medium uppercase tracking-wide mb-2">Setup Fee (one-time)</p>
-          <p class="font-heading font-black text-5xl text-brand-lime">$2,000</p>
-          <p class="text-green-300 text-xs mt-2">Both websites built + GBPs set up</p>
-        </div>
-        <div class="bg-white/10 rounded-xl p-6 text-center">
-          <p class="text-green-200 text-xs font-medium uppercase tracking-wide mb-2">Monthly Retainer</p>
-          <p class="font-heading font-black text-5xl text-brand-lime">$997</p>
-          <p class="text-green-300 text-xs mt-2">Both businesses managed</p>
-        </div>
-      </div>
-
-      <div class="bg-white/10 rounded-xl p-5 mb-6">
-        <div class="flex justify-between items-center text-sm">
-          <span class="text-green-200">Month-to-month after 3 months</span>
-          <span class="text-brand-lime font-bold">No long-term lock-in</span>
-        </div>
-      </div>
-
-      <div class="border-t border-green-600 pt-6 text-center">
-        <p class="text-green-200 text-sm mb-1">First month all-in:</p>
-        <p class="font-heading font-black text-3xl text-white">$2,997</p>
-        <p class="text-brand-lime text-sm mt-2 font-medium">That's 3 jobs. You're losing that every week right now.</p>
-      </div>
-    </section>
-
-    <!-- Close -->
-    <section class="text-center py-6">
-      <h2 class="font-heading font-black text-2xl text-brand-green mb-3">Why CoGrow</h2>
-      <p class="text-gray-600 text-sm leading-relaxed max-w-xl mx-auto mb-6">
-        We're not a web agency. We're not an SEO firm. We're a small team that builds systems for owner-operated businesses - and we only work with people where we're confident we can show ROI fast.<br/><br/>
-        You told us exactly what's broken. We know how to fix it. Let's get to work.
-      </p>
-      <div class="inline-block border-2 border-brand-green rounded-xl px-8 py-4">
-        <p class="font-heading font-bold text-brand-green text-lg">Paul Anastas</p>
-        <p class="text-gray-500 text-sm">CoGrow AI &nbsp;|&nbsp; paul@cogrow.ai &nbsp;|&nbsp; cogrow.ai</p>
-      </div>
-    </section>
-
+    </div>
   </div>
+</section>
 
-  <!-- Footer -->
-  <div class="bg-gray-50 border-t border-gray-200 px-8 py-4 text-center">
-    <p class="text-gray-400 text-xs">CoGrow AI LLC &nbsp;|&nbsp; cogrow.ai &nbsp;|&nbsp; Confidential - prepared exclusively for Brian</p>
+<!-- ════════════════════ DELIVERABLES ════════════════════ -->
+<section>
+  <div class="page">
+    <div class="section-label">03 — What You Get</div>
+    <h2>Deliverables</h2>
+    <p class="lead">Everything County Tree needs to dominate local search — without lifting a finger.</p>
+    <ul class="deliverables-list">
+      <li>
+        <span class="check">&#10003;</span>
+        <div><strong>New high-performance website</strong> — fast, mobile-optimized, built to convert. No more slow, fragmented mess.</div>
+      </li>
+      <li>
+        <span class="check">&#10003;</span>
+        <div><strong>Verified &amp; fully optimized Google Business Profile</strong> — photos, categories, service areas, review strategy, all managed.</div>
+      </li>
+      <li>
+        <span class="check">&#10003;</span>
+        <div><strong>Monthly SEO reports</strong> — clear data showing your rank movement, traffic, and leads so you always know what's working.</div>
+      </li>
+      <li>
+        <span class="check">&#10003;</span>
+        <div><strong>AI search visibility setup</strong> — optimized for ChatGPT, Perplexity, and other AI-driven search surfaces.</div>
+      </li>
+      <li>
+        <span class="check">&#10003;</span>
+        <div><strong>Ongoing management</strong> — you don't touch anything. CoGrow handles updates, optimization, and strategy month to month.</div>
+      </li>
+    </ul>
   </div>
+</section>
+
+<!-- ════════════════════ TIMELINE ════════════════════ -->
+<section>
+  <div class="page">
+    <div class="section-label">04 — Timeline</div>
+    <h2>How Fast This Happens</h2>
+    <p class="lead">We move quickly. Here's what to expect:</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="month">Month 1</div>
+        <h3>Launch</h3>
+        <p>New website live. Google Business Profile verified and optimized. You're on the map.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="month">Month 2</div>
+        <h3>Foundation</h3>
+        <p>SEO baseline established. Citations built across major directories. AI search optimization in place.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="month">Month 3+</div>
+        <h3>Growth</h3>
+        <p>Rankings move. Phone starts ringing more. Leads increase as your visibility compounds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ INVESTMENT ════════════════════ -->
+<section>
+  <div class="page">
+    <div class="section-label">05 — Investment</div>
+    <h2>What This Costs</h2>
+    <div class="investment-grid">
+      <div class="price-card setup">
+        <div class="label">One-Time Setup</div>
+        <div class="amount">$2,000</div>
+        <div class="note">Website + GBP + initial optimization</div>
+      </div>
+      <div class="price-card monthly">
+        <div class="label">Monthly Retainer</div>
+        <div class="amount">$997</div>
+        <div class="note">SEO, GEO, reporting &amp; management</div>
+      </div>
+    </div>
+    <div class="roi-box">
+      <h3>The Math</h3>
+      <p>Your average tree service job is <strong>$1,000+</strong>.</p>
+      <p><strong>One new job</strong> from better visibility pays for the entire setup.</p>
+      <p><strong>One additional job per month</strong> more than covers the retainer — and your competitors are getting those jobs right now because they rank and you don't.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ WHY COGROW ════════════════════ -->
+<section>
+  <div class="page">
+    <div class="section-label">06 — Why CoGrow</div>
+    <h2>Why Work With Us</h2>
+    <div class="why-list">
+      <div class="why-item">
+        <div class="bullet"></div>
+        <div>
+          <h3>Built for Field Service Businesses</h3>
+          <p>We don't do everything for everyone. We specialize in helping service businesses like tree care, HVAC, and contractors grow through local search and AI visibility.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="bullet"></div>
+        <div>
+          <h3>AI-Powered — Not a Generic Agency</h3>
+          <p>We use AI tooling to move faster, report smarter, and optimize in ways traditional agencies can't. You get agency-level strategy with technology that gives you an edge.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="bullet"></div>
+        <div>
+          <h3>No Long-Term Contract</h3>
+          <p>Month-to-month after the initial setup. We earn your business every month. If the results aren't there, you can walk — but they will be.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ CTA ════════════════════ -->
+<section class="cta-section">
+  <div class="page">
+    <h2>Ready to Stop Losing Jobs to Competitors?</h2>
+    <p>Let's lock in a start date and get County Tree ranking where it belongs.</p>
+    <a href="https://cal.com/cogrowai/freeaudit" class="cta-btn">Book a Call with PJ</a>
+  </div>
+</section>
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+<footer>
+  <div class="brand">CoGrow</div>
+  <p>PJ Anastas &middot; <a href="mailto:paul@cogrow.ai">paul@cogrow.ai</a> &middot; <a href="https://cogrow.ai">cogrow.ai</a></p>
+</footer>
 
 </body>
 </html>
